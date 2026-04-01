@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailto Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        button, a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover, a:hover {
+            background: #0056b3;
+        }
+        .test-section {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mailto Functionality Test</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: Direct HTML Link</h2>
+        <a href="mailto:sanaf8865@gmail.com?subject=Test Email&body=This is a test email from your portfolio">
+            Click to Email Sana
+        </a>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 2: JavaScript window.location</h2>
+        <button onclick="testWindowLocation()">
+            Test window.location.href
+        </button>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 3: JavaScript window.open</h2>
+        <button onclick="testWindowOpen()">
+            Test window.open
+        </button>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 4: Create Link and Click</h2>
+        <button onclick="testCreateLink()">
+            Test Create Link Method
+        </button>
+    </div>
+
+    <div class="test-section">
+        <h2>Results</h2>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        function log(message) {
+            const results = document.getElementById('results');
+            results.innerHTML += '<p>' + message + '</p>';
+            console.log(message);
+        }
+
+        function testWindowLocation() {
+            log('Testing window.location.href...');
+            const mailtoUrl = 'mailto:sanaf8865@gmail.com?subject=Test%20Location&body=Testing%20window.location.href';
+            log('URL: ' + mailtoUrl);
+            window.location.href = mailtoUrl;
+        }
+
+        function testWindowOpen() {
+            log('Testing window.open...');
+            const mailtoUrl = 'mailto:sanaf8865@gmail.com?subject=Test%20Open&body=Testing%20window.open';
+            log('URL: ' + mailtoUrl);
+            window.open(mailtoUrl, '_self');
+        }
+
+        function testCreateLink() {
+            log('Testing create link method...');
+            const mailtoUrl = 'mailto:sanaf8865@gmail.com?subject=Test%20Link&body=Testing%20create%20link%20method';
+            log('URL: ' + mailtoUrl);
+            
+            const link = document.createElement('a');
+            link.href = mailtoUrl;
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Test on page load
+        window.onload = function() {
+            log('Page loaded. Ready to test mailto functionality.');
+            log('Your default email client should open when you click the buttons.');
+        };
+    </script>
+</body>
+</html>
