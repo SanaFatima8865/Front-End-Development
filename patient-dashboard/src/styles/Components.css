@@ -1,0 +1,126 @@
+/* Diagnostic List Styles */
+.diagnostic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.diagnostic-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.diagnostic-item:last-child {
+  border-bottom: none;
+}
+
+.diagnostic-icon {
+  margin-right: 12px;
+  color: #4fc3f7;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.diagnostic-content {
+  flex: 1;
+}
+
+.diagnostic-name {
+  font-weight: 500;
+  color: #1a237e;
+  margin-bottom: 4px;
+}
+
+.diagnostic-description {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.diagnostic-status {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-under-observation {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.status-normal {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-critical {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Lab Results Status Classes */
+.lab-result-status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-normal {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-higher-than-average,
+.status-high {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.status-lower-than-average,
+.status-low {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-unknown {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+/* Diagnosis History Status Badges */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status-badge.status-normal {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.status-high {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.status-badge.status-low {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-badge.status-unknown {
+  background-color: #f5f5f5;
+  color: #666;
+}

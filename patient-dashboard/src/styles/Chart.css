@@ -1,0 +1,161 @@
+.chart-card {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.chart-hist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+background: #F4F0FE 0% 0% no-repeat padding-box;
+border-radius: 12px;
+height: 300px;
+padding: 16px;
+gap: 20px;
+}
+
+.chart-body {
+width: -webkit-fill-available;
+}
+
+.chart-body:first-child {
+    width: 75%;
+}
+
+.chart-body:last-child {
+    width: 25%;
+}
+
+.chart-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.chart-vitals {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 16px;
+}
+
+.chart-vitals:first-child {
+    padding-top: 0;
+}
+
+.chart-vitals:last-child {
+    border-bottom: none;
+}
+
+.chart-vitals p {
+    font: normal normal bold 14px/19px Manrope;
+letter-spacing: 0px;
+color: #072635;
+text-transform: capitalize;
+}
+
+.chart-vitals p:last-child {
+    font: normal normal normal 14px/19px Manrope;
+}
+
+.chart-vitals h4 {
+    text-align: left;
+font: normal normal bold 22px/30px Manrope;
+letter-spacing: 0px;
+color: #072635;
+text-transform: capitalize;
+}
+
+.chart-head h4 {
+font: normal normal bold 18px/24px Manrope;
+color: #072635;
+text-transform: capitalize;
+}
+
+.chart-dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.chart-dropdown p {
+    font: normal normal normal 14px/19px Manrope;
+color: #072635;
+}
+
+.chart-dropdown img {
+    width: 11px;
+height: 6px;
+}
+
+.chart-history {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.history-item {
+    background: #E0F3FA 0% 0% no-repeat padding-box;
+border-radius: 12px;
+padding: 16px;
+width: -webkit-fill-available;
+}
+
+.history-item:nth-child(2) {
+    background: #FFE6E9 0% 0% no-repeat padding-box;
+}
+
+.history-item:last-child {
+    background: #FFE6F1 0% 0% no-repeat padding-box;
+}
+
+.history-item p {
+    font: normal normal normal 16px/22px Manrope;
+letter-spacing: 0px;
+color: #072635;
+text-transform: capitalize;
+}
+
+.history-item p:last-child {
+text-align: left;
+font: normal normal normal 14px/19px Manrope;
+letter-spacing: 0px;
+color: #072635;
+padding-top: 15px;
+} 
+
+.history-item h4 {
+text-align: left;
+font: normal normal 800 30px/41px Manrope;
+letter-spacing: 0px;
+color: #072635;
+}
+
+.history-item img {
+    width: 96px;
+height: 96px;
+}
+
+@media (max-width: 768px) {
+  .history-item {
+    padding: 10px;
+  }
+
+  .history-item img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .history-item p {
+    font: normal normal normal 12px / 18px Manrope;
+  }
+
+  .history-item h4 {
+    font: normal normal 800 16px / 22px Manrope;
+  }
+}

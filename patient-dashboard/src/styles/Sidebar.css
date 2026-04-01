@@ -1,0 +1,143 @@
+/* Sidebar Styles */
+.sidebar {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+border-radius: 16px;
+/* height: 100vh; */
+width: 367px;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 18px;
+height: 18px;
+}
+
+.logo h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav-menu {
+  list-style: none;
+  flex-grow: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.active {
+  background: #D8FCF7 0% 0% no-repeat padding-box;
+}
+
+.nav-item i {
+  font-size: 20px;
+  margin-right: 15px;
+  width: 24px;
+  text-align: center;
+}
+
+.nav-item span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.avatar-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-info h4 {
+  font: normal normal bold 14px/19px Manrope;
+  color: #072635;
+}
+
+.user-info p {
+  font: normal normal normal 14px/19px Manrope;
+letter-spacing: 0px;
+color: #707070;
+}
+
+.icons .more {
+  width: 18px;
+height: 4px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .logo h1, .nav-item span, .user-info, .user-profile .fa-chevron-down {
+    display: none;
+  }
+  
+  .logo {
+    margin-bottom: 0;
+  }
+  
+  .nav-menu {
+    display: none;
+  }
+  
+  .user-profile {
+    border-top: none;
+    margin-top: 0;
+    padding: 0;
+  }
+  
+  .user-avatar {
+    margin-right: 0;
+  }
+}
